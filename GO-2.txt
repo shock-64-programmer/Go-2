@@ -1,0 +1,19 @@
+
+package main
+
+import "fmt"
+
+type Pair struct {
+    a, b int
+}
+
+func (p Pair) calcSum() Pair {
+    return Pair{p.a + p.b, p.a + p.b}
+}
+
+func main() {
+    p := Pair{3, 4}
+    sum := p.calcSum()
+    fmt.Println("Original Pair:", p)
+    fmt.Println("Sum Pair:", sum)
+}
